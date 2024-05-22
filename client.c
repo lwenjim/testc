@@ -15,7 +15,8 @@ int main(void)
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_addr.s_addr = inet_addr("127.0.0.1");
     serv_addr.sin_port = htons(12345);
-    connect(sock, (struct sockaddr*)&serv_addr, sizeof(serv_addr));
+
+    int i = connect(sock, (struct sockaddr*)&serv_addr, sizeof(serv_addr));
     
     // 接收服务器端的数据
     char buf[1024];

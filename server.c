@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 #include <sys/socket.h>
-int main(void)
+int main(int argc, char** argv)
 {
     // 创建Socket描述符
     int serv_sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
@@ -16,7 +16,7 @@ int main(void)
     serv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
     serv_addr.sin_port = htons(12345);
     
-    bind(serv_sock, (struct sockaddr*)&serv_addr, sizeof(serv_addr));
+    int i = bind(serv_sock, (struct sockaddr*)&serv_addr, sizeof(serv_addr));
 
     // 进入监听状态
     listen(serv_sock, 5);
