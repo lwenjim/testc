@@ -131,3 +131,4 @@ int main(void)
     printf("Memory size occupied by aata : %lu\n", sizeof(data));
    return 0;
 }
+

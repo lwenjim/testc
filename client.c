@@ -22,7 +22,8 @@ int main(void)
     char buf[1024];
     read(sock, buf, sizeof(buf) - 1);
     printf("Message from server: %s\n", buf);
-    
+    write(sock, buf, strlen(buf));
+
     // 关闭Socket
     close(sock);
     return 0;

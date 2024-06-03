@@ -30,8 +30,15 @@ int main(int argc, char** argv)
     char str[] = "Hello World!";
     write(clnt_sock, str, sizeof(str));
 
+    char str2[1024];
+    int j = read(clnt_sock, str2, sizeof(str2));
+    printf("str: %s, j: %d \n", str, j);
+
     // 关闭Socket
     close(clnt_sock);
     close(serv_sock);
+    printf("clnt_addr_size: %d \n", clnt_addr_size);
+
+
     return 0;
 }
