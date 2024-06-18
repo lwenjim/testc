@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "pcre.h"
 
 int main() {
     // int i, n;
@@ -55,13 +56,14 @@ int main() {
     // memset(str, '$', 3);
     // puts(str); 
 
-    char name[100];
-    char *description;
-    strcpy(name, "Zara Ali");
-    description = (char *)malloc(200 * sizeof(char));
-    strcpy(description, "Zara ali a DPS student in class 10th");
-    printf("Name = %s\n", name); 
-    printf("Description: %s\n", description);
+    // char name[100];
+    // char *description;
+    // strcpy(name, "Zara Ali");
+    // description = (char *)malloc(200 * sizeof(char));
+    // strcpy(description, "Zara ali a DPS student in class 10th");
+    // printf("Name = %s\n", name); 
+    // printf("Description: %s\n", description);
 
+    printf("%d", PCRE_ERROR_PARTIAL);
     return 0;
 }
